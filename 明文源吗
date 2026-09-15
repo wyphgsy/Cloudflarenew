@@ -2818,6 +2818,10 @@ async function 处理订阅请求(请求507, 用户506, 网址505 = null) {
       订阅内容 = 生成值值552(最终链接列表);
       内容类型483 = 'text/plain; charset=utf-8';
       break;
+    case 'lxbox':
+      订阅内容 = btoa(最终链接列表.join('\n'));
+      内容类型483 = 'text/plain; charset=utf-8';
+      break;
     case atob('c2luZ2JveA=='):
     case 解码64('c2luZy1ib3g='):
     case 解码64('c2luZ2JveA=='):
@@ -5274,6 +5278,7 @@ async function 处理订阅值(请求241, 用户240 = null) {
                     <button class="client-btn" onclick="生成客户端链接(atob('djJyYXk='), 'V2RAYNG')">V2RAYNG</button>
                     <button class="client-btn" onclick="生成客户端链接(atob('djJyYXk='), 'NEKORAY')">NEKORAY</button>
                     <button class="client-btn" onclick="生成客户端链接(atob('djJyYXk='), 'Shadowrocket')">Shadowrocket</button>
+                    <button class="client-btn" onclick="生成客户端链接('lxbox', 'LXBOX')">LXBOX</button>
                 </div>
                 <div class="subscription-url" id="clientSubscriptionUrl"></div>
             </div>
